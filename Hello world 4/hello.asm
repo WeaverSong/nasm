@@ -3,6 +3,8 @@
 ; and ld -o hello hello.o
 ; Run with just ./hello
 
+; https://filippo.io/linux-syscall-table/
+
 ; files to include
 %include 'fun_print_string_ln.asm'
 %include 'fun_exit.asm'

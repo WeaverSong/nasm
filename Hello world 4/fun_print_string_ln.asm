@@ -10,7 +10,7 @@ fun_print_string_ln:
     mov rax, 1
     mov rdi, 1
 
-    mov rdx, 04h
+    mov rdx, 1
     lea rsi, [rsp] ; rsi is location to print from. This syntax is used to convert relative to absolute. Needed for stack pointer.
     syscall
 

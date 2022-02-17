@@ -3,20 +3,20 @@
 
 fun_print_string:
 
-    push rcx ; Used to hold the string location. Copied from rax
+    push rsi ; Used to hold the string location. Copied from rax
     push rdx ; Used to hold the string length. Copied from rax after fun_strln
-    push rbx
+    push rdi
 
-    mov rcx, rax
+    mov rsi, rax
     call fun_strln
     mov rdx, rax
 
-    mov rbx, 1 ; 1 = STDOUT
-    mov rax, 4 ; 4 = SYS_WRITE
-    int 80h
+    mov rdi, 1 ; 1 = STDOUT
+    mov rax, 1 ; 4 = SYS_WRITE
+    syscall
 
-    pop rbx
+    pop rdi
     pop rdx
-    pop rcx
+    pop rsi
 
     ret
