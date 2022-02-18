@@ -6,7 +6,7 @@
         {
             "label": "Assemble",
             "type": "shell",
-            "command": "cd \"${fileDirname}\" && nasm -felf64 hello.asm && ld -o hello hello.o",
+            "command": "cd \"${fileDirname}\" && nasm -i /home/weaversong/source/nasm/Functions -felf64 hello.asm && ld -o hello hello.o",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
