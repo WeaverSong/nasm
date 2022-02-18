@@ -26,16 +26,16 @@ _start: ; This is where the program starts running
     mov rax, msg2
     call fun_print_string_ln
 
-    mov rdx, 10
+    mov rdx, 1
 
 loop_body:
-    cmp rdx, 0
-    jz end
+    cmp rdx, 11
+    je end
 
     mov rax, rdx
     call fun_print_number
 
-    dec rdx
+    inc rdx
     jmp loop_body
 
 end:
